@@ -7,6 +7,8 @@ import NextDocument, {
   NextScript,
 } from "next/document"
 import React from "react"
+import GAScriptHead from "analytics/ga-script-head"
+import GAScriptBody from "analytics/ga-script-body"
 
 class Document extends NextDocument {
   static getInitialProps(ctx: DocumentContext) {
@@ -17,15 +19,17 @@ class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
+          <GAScriptHead />
           <link
             rel="preload"
-            href="/fonts/Inter.woff2"
+            href="/fonts/PlusJakartaSans-Regular.woff"
             as="font"
-            type="font/woff2"
+            type="font/woff"
             crossOrigin="anonymous"
           />
         </Head>
         <body>
+          <GAScriptBody />
           <ColorModeScript />
           <Main />
           <NextScript />

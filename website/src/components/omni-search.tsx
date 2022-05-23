@@ -36,7 +36,7 @@ function OptionText(props: any) {
     const text = textToHighlight.substr(start, end - start)
     if (highlight) {
       return (
-        <Box as="mark" bg="transparent" color="teal.500">
+        <Box as="mark" bg="transparent" color="brand.500">
           {text}
         </Box>
       )
@@ -266,7 +266,7 @@ function OmniSearch() {
               onKeyUp={onKeyUp}
             />
             <Center pos="absolute" left={7} h="68px">
-              <SearchIcon color="teal.500" boxSize="20px" />
+              <SearchIcon color="brand.500" boxSize="20px" />
             </Center>
           </Flex>
           <ModalBody maxH="66vh" p="0" ref={menuRef}>
@@ -313,7 +313,7 @@ function OmniSearch() {
                               bg: "gray.100",
                               ".chakra-ui-dark &": { bg: "gray.600" },
                               _selected: {
-                                bg: "teal.500",
+                                bg: "brand.500",
                                 color: "white",
                                 mark: {
                                   color: "white",

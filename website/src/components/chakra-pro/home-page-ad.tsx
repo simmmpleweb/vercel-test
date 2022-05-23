@@ -31,7 +31,7 @@ export const ChakraProAd = () => (
         >
           <Box
             as="span"
-            bgGradient="linear(to-r, blue.400, teal.400)"
+            bgGradient="linear(to-r, blue.400, brand.400)"
             bgClip="text"
           >
             Build faster

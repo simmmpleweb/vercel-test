@@ -5,12 +5,16 @@
       "heading": true,
       "routes": [
         {
+          "title": "Introduction",
+          "path": "/docs/introduction"
+        },
+        {
           "title": "Installation",
-          "path": "/docs/getting-started"
+          "path": "/docs/installation"
         },
         {
           "title": "Changelog",
-          "path": "/changelog"
+          "path": "/docs/changelog"
         },
         {
           "title": "Routing",
@@ -86,8 +90,16 @@
               "path": "/docs/form/icon-button"
             },
             {
+              "title": "Pin Input",
+              "path": "/docs/form/pin-input"
+            },
+            {
               "title": "Input",
               "path": "/docs/form/input"
+            },
+            {
+              "title": "Range Slider",
+              "path": "/docs/form/range-slider"
             },
             {
               "title": "Switch",
@@ -137,6 +149,10 @@
           "open": true,
           "sort": true,
           "routes": [
+            {
+              "title": "Alerts",
+              "path": "/docs/feedback/alerts"
+            },
             {
               "title": "Progress",
               "path": "/docs/feedback/progress"
@@ -231,6 +247,56 @@
             {
               "title": "Portal",
               "path": "/docs/components/portal"
+            },
+            {
+              "new": true,
+              "title": "Fields",
+              "path": "/docs/components/fields"
+            },
+            {
+              "new": true,
+              "title": "Dropzone",
+              "path": "/docs/components/dropzone"
+            },
+            {
+              "new": true,
+              "title": "Actions",
+              "path": "/docs/components/actions"
+            },
+            {
+              "new": true,
+              "title": "Data Display",
+              "path": "/docs/components/data-display"
+            },
+            {
+              "new": true,
+              "title": "Map",
+              "path": "/docs/components/map"
+            },
+            {
+              "new": true,
+              "title": "Data Tables",
+              "path": "/docs/components/data-tables"
+            },
+            {
+              "new": true,
+              "title": "Calendar",
+              "path": "/docs/components/calendar"
+            },
+            {
+              "new": true,
+              "title": "Kanban",
+              "path": "/docs/components/kanban"
+            },
+            {
+              "new": true,
+              "title": "Wizard",
+              "path": "/docs/components/wizard"
+            },
+            {
+              "new": true,
+              "title": "Quill",
+              "path": "/docs/components/quill"
             }
           ]
         },

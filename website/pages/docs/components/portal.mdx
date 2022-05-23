@@ -1,5 +1,5 @@
 ---
-title: Portal
+title: Chakra UI Portal - Horizon UI
 package: "@chakra-ui/portal"
 image: "components/portal.svg"
 description: Renders a React subtree in a different part of the DOM.
@@ -14,7 +14,7 @@ popovers, dropdowns, and modals). It supports nested portals
 
 ## Import
 
-```js
+```tsx
 import { Portal } from "@chakra-ui/react"
 ```
 
@@ -93,7 +93,7 @@ function Example() {
   return (
     <div>
       <Portal containerRef={ref}>
-        <Box bg="teal.500" color="white">
+        <Box bg="brand.500" color="white">
           Parent: Hey welcome,
           <Portal>Child: I'm attached to my parent portal</Portal>
         </Box>
@@ -110,7 +110,7 @@ function Example() {
   return (
     <div>
       <Portal containerRef={ref}>
-        <Box bg="teal.500" color="white">
+        <Box bg="brand.500" color="white">
           Parent: Hey welcome,
           <Portal>Child: I'm attached to my parent portal</Portal>
         </Box>
@@ -132,7 +132,7 @@ function Example() {
   return (
     <div>
       <Portal containerRef={ref}>
-        <Box bg="teal.500" color="white">
+        <Box bg="brand.500" color="white">
           Parent: Hey welcome,
           <Portal appendToParentPortal={false}>
             Child: I'm going to document.body
@@ -151,7 +151,7 @@ function Example() {
   return (
     <div>
       <Portal containerRef={ref}>
-        <Box bg="teal.500" color="white">
+        <Box bg="brand.500" color="white">
           Parent: Hey welcome,
           <Portal appendToParentPortal={false}>
             Child: I'm going to document.body
