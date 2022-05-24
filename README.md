@@ -10,7 +10,7 @@
 Most trendiest, complex and innovative Dashboard Made by
 [Creative Tim](https://creative-tim.com/?ref=readme-pud) &
 [Simmmple](https://simmmple.com?ref=readme-pud). Check our latest Free ReactJS
-Dashboard based on Chakra UI.
+Dashboard based on Chakra UI. test
 
 Designed for those who like modern UI elements and beautiful websites. Made of
 hundred of elements, designed blocks and fully coded pages, Purity UI Dashboard
