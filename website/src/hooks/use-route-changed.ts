@@ -6,6 +6,7 @@ const useRouteChanged = (fn: () => void) => {
   useEffect(() => {
     const handleRouteChange = (url: string) => {
       fn()
+      console.log("App is changing to: ", url)
     }
 
     router.events.on("routeChangeComplete", handleRouteChange)

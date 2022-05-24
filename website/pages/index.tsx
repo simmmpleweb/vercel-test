@@ -10,14 +10,19 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react"
+import { AdBanner } from "components/chakra-pro/ad-banner"
 import Container from "components/container"
 import { Footer } from "components/footer"
 import Header from "components/header"
 import SEO from "components/seo"
 import NextLink from "next/link"
 import * as React from "react"
+import { DiGithubBadge } from "react-icons/di"
 import { FaArrowRight } from "react-icons/fa"
 import type { Member, Sponsor } from "src/types/github"
+import { getAllContributors } from "utils/get-all-contributors"
+import { getAllMembers } from "utils/get-all-members"
+import { getAllSponsors } from "utils/get-all-sponsors"
 import { getGithubStars } from "utils/get-github-stars"
 
 const Feature = ({ title, icon, children, ...props }) => {
@@ -33,7 +38,7 @@ const Feature = ({ title, icon, children, ...props }) => {
         rounded="full"
         w="12"
         h="12"
-        bg="brand.500"
+        bg="teal.500"
         align="center"
         justify="center"
       >
@@ -54,7 +59,7 @@ interface StatBoxProps extends BoxProps {
   title: string
   description: string
 }
-// test again
+
 const StatBox = (props: StatBoxProps) => {
   const { icon: StatIcon, title, description, ...rest } = props
   return (
@@ -90,9 +95,10 @@ const HomePage = ({ members, sponsors, githubStars }: HomePageProps) => {
   return (
     <>
       <SEO
-        title="Horizon UI Documentation - The official documentation for Horizon UI. Trendiest Open Source Framework for Chakra UI"
-        description="Start building your dashboard with Horizon UI, the most trendiest Open Source Framework for Chakra UI!"
+        title="Chakra UI - A simple, modular and accessible component library that gives you the building blocks you need to build your React applications."
+        description="Simple, Modular and Accessible UI Components for your React Applications. Built with Styled System"
       />
+      <AdBanner />
       <Header />
       <Box mb={20}>
         <Box as="section" pt="6rem" pb={{ base: "0", md: "5rem" }}>
@@ -108,10 +114,10 @@ const HomePage = ({ members, sponsors, githubStars }: HomePageProps) => {
                 mb="16px"
                 lineHeight="1.2"
               >
-                Horizon UI
+                Purity UI Dashboard
                 <Box
                   as="span"
-                  color={useColorModeValue("brand.500", "brand.400")}
+                  color={useColorModeValue("teal.500", "teal.300")}
                 >
                   {" "}
                   Documentation
@@ -125,8 +131,9 @@ const HomePage = ({ members, sponsors, githubStars }: HomePageProps) => {
                 fontSize={{ base: "lg", lg: "xl" }}
                 mt="6"
               >
-                Start building your dashboard with Horizon UI, the most
-                trendiest Open Source Framework based on Chakra UI!
+                Most trendiest, complex and innovative Dashboard Made by
+                Creative Tim & Simmmple. Check our latest Free ReactJS Dashboard
+                based on Chakra UI.
               </Text>
 
               <Stack
@@ -135,33 +142,30 @@ const HomePage = ({ members, sponsors, githubStars }: HomePageProps) => {
                 justify="center"
                 direction={{ base: "column", sm: "row" }}
               >
-                <NextLink href="/docs/introduction" passHref>
+                <NextLink href="/docs/getting-started" passHref>
                   <Button
-                    borderRadius="15px"
                     h="4rem"
                     px="40px"
                     fontSize="1.2rem"
                     as="a"
                     size="lg"
-                    color="white"
-                    colorScheme="brand"
-                    bg={useColorModeValue("brand.500", "brand.400")}
+                    colorScheme="teal"
                     rightIcon={<FaArrowRight fontSize="0.8em" />}
                   >
                     Documentation
                   </Button>
                 </NextLink>
                 <Button
-                  borderRadius="15px"
                   as="a"
                   size="lg"
                   h="4rem"
                   px="40px"
                   fontSize="1.2rem"
-                  href="https://github.com/horizon-ui/horizon-ui-chakra"
+                  href="https://github.com/creativetimofficial/purity-ui-dashboard/"
                   target="__blank"
+                  leftIcon={<DiGithubBadge size="1.5em" />}
                 >
-                  Free Download
+                  GitHub
                 </Button>
               </Stack>
             </Box>
@@ -175,10 +179,16 @@ const HomePage = ({ members, sponsors, githubStars }: HomePageProps) => {
 
 export async function getStaticProps() {
   const { prettyCount } = await getGithubStars()
+  const contributors = getAllContributors()
+  const members = getAllMembers()
+  const sponsors = getAllSponsors()
 
   return {
     props: {
       githubStars: prettyCount,
+      members,
+      contributors,
+      sponsors,
     },
   }
 }

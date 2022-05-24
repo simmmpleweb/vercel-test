@@ -1,5 +1,5 @@
 ---
-title: Chakra UI Drawer - Horizon UI
+title: Drawer
 package: "@chakra-ui/drawer"
 image: "components/drawer.svg"
 description:
@@ -14,7 +14,7 @@ without leaving the current page.
 
 ## Import
 
-```tsx
+```js
 import {
   Drawer,
   DrawerBody,
@@ -37,7 +37,7 @@ function DrawerExample() {
 
   return (
     <>
-      <Button ref={btnRef} colorScheme="brand" onClick={onOpen}>
+      <Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
         Open
       </Button>
       <Drawer
@@ -59,7 +59,7 @@ function DrawerExample() {
             <Button variant="outline" mr={3} onClick={onClose}>
               Cancel
             </Button>
-            <Button colorScheme="brand">Save</Button>
+            <Button colorScheme="blue">Save</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
@@ -75,7 +75,7 @@ function DrawerExample() {
 
   return (
     <>
-      <Button ref={btnRef} colorScheme="brand" onClick={onOpen}>
+      <Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
         Open
       </Button>
       <Drawer
@@ -97,7 +97,7 @@ function DrawerExample() {
             <Button variant="outline" mr={3} onClick={onClose}>
               Cancel
             </Button>
-            <Button colorScheme="brand">Save</Button>
+            <Button colorScheme="blue">Save</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
@@ -126,7 +126,7 @@ function PlacementExample() {
           <Radio value="left">Left</Radio>
         </Stack>
       </RadioGroup>
-      <Button colorScheme="brand" onClick={onOpen}>
+      <Button colorScheme="blue" onClick={onOpen}>
         Open
       </Button>
       <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
@@ -160,7 +160,7 @@ function PlacementExample() {
           <Radio value="left">Left</Radio>
         </Stack>
       </RadioGroup>
-      <Button colorScheme="brand" onClick={onOpen}>
+      <Button colorScheme="blue" onClick={onOpen}>
         Open
       </Button>
       <Drawer placement={placement} onClose={onClose} isOpen={isOpen}>
@@ -194,7 +194,7 @@ function DrawerExample() {
 
   return (
     <>
-      <Button leftIcon={<AddIcon />} colorScheme="brand" onClick={onOpen}>
+      <Button leftIcon={<AddIcon />} colorScheme="teal" onClick={onOpen}>
         Create user
       </Button>
       <Drawer
@@ -236,8 +236,8 @@ function DrawerExample() {
 
               <Box>
                 <FormLabel htmlFor="owner">Select Owner</FormLabel>
-                <Select id="owner" defaultValue="naruto">
-                  <option value="naruto">Fred Michael</option>
+                <Select id="owner" defaultValue="segun">
+                  <option value="segun">Fred Michael</option>
                   <option value="kola">John Wilson</option>
                 </Select>
               </Box>
@@ -253,7 +253,7 @@ function DrawerExample() {
             <Button variant="outline" mr={3} onClick={onClose}>
               Cancel
             </Button>
-            <Button colorScheme="brand">Submit</Button>
+            <Button colorScheme="blue">Submit</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
@@ -269,7 +269,7 @@ function DrawerExample() {
 
   return (
     <>
-      <Button leftIcon={<AddIcon />} colorScheme="brand" onClick={onOpen}>
+      <Button leftIcon={<AddIcon />} colorScheme="teal" onClick={onOpen}>
         Create user
       </Button>
       <Drawer
@@ -311,8 +311,8 @@ function DrawerExample() {
 
               <Box>
                 <FormLabel htmlFor="owner">Select Owner</FormLabel>
-                <Select id="owner" defaultValue="naruto">
-                  <option value="naruto">Fred Michael</option>
+                <Select id="owner" defaultValue="segun">
+                  <option value="segun">Fred Michael</option>
                   <option value="kola">John Wilson</option>
                 </Select>
               </Box>
@@ -328,7 +328,7 @@ function DrawerExample() {
             <Button variant="outline" mr={3} onClick={onClose}>
               Cancel
             </Button>
-            <Button colorScheme="brand">Submit</Button>
+            <Button colorScheme="blue">Submit</Button>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

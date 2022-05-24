@@ -4,12 +4,12 @@ export interface RouteItem {
   open?: boolean
   heading?: boolean
   sort?: boolean
-  routes
+  routes?: RouteItem[]
   new?: true
 }
 
 export interface Routes {
-  routes
+  routes: RouteItem[]
 }
 
 export interface Page {
@@ -57,7 +57,10 @@ export const getAllRoutes = (routes: any) => {
 /**
  * Returns the siblings of a specific route (that is the previous and next routes).
  */
-export const getRouteContext = (_route: RouteItem, routes): RouteContext => {
+export const getRouteContext = (
+  _route: RouteItem,
+  routes: RouteItem[],
+): RouteContext => {
   let ctx = {}
   if (!_route) return ctx
 

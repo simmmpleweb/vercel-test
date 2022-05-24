@@ -8,6 +8,7 @@ import SEO from "components/seo"
 import TableOfContent from "components/table-of-content"
 import { convertBackticksToInlineCode } from "utils/convert-backticks-to-inline-code"
 import PageTransition from "./page-transition"
+import { AdBanner } from "./chakra-pro/ad-banner"
 
 function useHeadingFocusOnRouteChange() {
   const router = useRouter()
@@ -54,6 +55,7 @@ function PageContainer(props: PageContainerProps) {
     <>
       <SEO title={title} description={description} />
       <SkipNavLink zIndex={20}>Skip to Content</SkipNavLink>
+      <AdBanner />
       <Header />
       <Box as="main" className="main-content" w="full" maxW="8xl" mx="auto">
         <Box display={{ md: "flex" }}>
@@ -73,7 +75,7 @@ function PageContainer(props: PageContainerProps) {
                       {convertBackticksToInlineCode(title)}
                     </chakra.h1>
                     {version && (
-                      <Badge colorScheme="brand" letterSpacing="wider">
+                      <Badge colorScheme="teal" letterSpacing="wider">
                         v{version}
                       </Badge>
                     )}

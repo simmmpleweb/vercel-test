@@ -62,9 +62,9 @@ function TableOfContent(props: TableOfContentProps) {
               fontWeight={id === activeId ? "bold" : "medium"}
               href={`#${id}`}
               aria-current={id === activeId ? "location" : undefined}
-              color={useColorModeValue("gray.600", "white")}
+              color={useColorModeValue("gray.600", "gray.400")}
               _hover={{
-                color: useColorModeValue("gray.900", "white"),
+                color: useColorModeValue("gray.900", "gray.600"),
               }}
             >
               {text}

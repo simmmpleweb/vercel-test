@@ -3,36 +3,8 @@ import { mode } from "@chakra-ui/theme-tools"
 
 const customTheme = extendTheme({
   fonts: {
-    heading: "Plus Jakarta Display, sans-serif",
-    body: "Plus Jakarta Display, sans-serif",
-  },
-  colors: {
-    secondaryGray: {
-      100: "#E0E5F2",
-      200: "#E1E9F8",
-      300: "#F4F7FE",
-      400: "#E9EDF7",
-      500: "#8F9BBA",
-      600: "#A3AED0",
-      700: "#707EAE",
-      800: "#707EAE",
-      900: "#1B2559",
-    },
-    gray: {
-      700: "#1f2733",
-    },
-    brand: {
-      50: "#F3F0FF",
-      100: "#E9E3FF",
-      200: "#B9A2FF",
-      300: "#9374FF",
-      400: "#7551FF",
-      500: "#4318FF",
-      600: "#3311DB",
-      700: "#2200B7",
-      800: "#190793",
-      900: "#11047A",
-    },
+    heading: "Inter, sans-serif",
+    body: "Inter, sans-serif",
   },
   styles: {
     global: (props) => ({
@@ -54,6 +26,7 @@ const customTheme = extendTheme({
       fontFamily: "heading",
       textAlign: "center",
       fontWeight: "bold",
+      letterSpacing: "-0.015em",
       lineHeight: "1.24",
       fontSize: { base: "2rem", md: "3.5rem" },
     },
@@ -61,6 +34,7 @@ const customTheme = extendTheme({
       fontFamily: "heading",
       textAlign: "center",
       fontWeight: "bold",
+      letterSpacing: "-0.015em",
       lineHeight: "1.24",
       fontSize: { base: "1.75rem", md: "2.75rem" },
     },
@@ -106,12 +80,12 @@ const customTheme = extendTheme({
       fontSize: "1.125rem",
     },
     a: {
-      color: "brand.400",
+      color: "teal.500",
       fontWeight: "semibold",
       transition: "color 0.15s",
       transitionTimingFunction: "ease-out",
       _hover: {
-        color: "brand.400",
+        color: "teal.600",
       },
     },
     p: {

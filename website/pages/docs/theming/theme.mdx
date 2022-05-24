@@ -1,10 +1,10 @@
 ---
-title: Chakra UI Theme (Colors, etc) - Horizon UI
-description: The default Horizon UI theme tokens
+title: Theme (Colors, etc)
+description: The default Purity UI Dashboard theme tokens
 ---
 
-The theme object is where you define your Horizon UI's color palette, type
-scale, font stacks, breakpoints, border radius values, and more.
+The theme object is where you define your Purity UI Dashboard's color palette,
+type scale, font stacks, breakpoints, border radius values, and more.
 
 ## Colors
 
@@ -18,7 +18,7 @@ We recommend adding a palette that ranges from `50` to `900`. Tools like
 [Coolors](https://coolors.co/app) or [Palx](https://palx.jxnblk.com) are
 available to generate these palettes.
 
-```tsx
+```js
 // theme.js
 export default {
   colors: {
@@ -41,12 +41,6 @@ export default {
   <ColorPalette color="black" name="Black" />
   <ColorPalette color="white" name="White" />
   <div />
-</ColorWrapper>
-
-### Brand
-
-<ColorWrapper>
-  <ColorPalettes color="brand" />
 </ColorWrapper>
 
 ### Gray
@@ -184,10 +178,10 @@ export default {
 
 ## Breakpoints
 
-Horizon UI comes with a predefined set of commonly used breakpoints.
+Purity UI Dashboard comes with a predefined set of commonly used breakpoints.
 
 > Learn more about
-> [Responsive Styles and Customizing Breakpoints](/docs-horizon-ui-chakra/docs/features/responsive-styles).
+> [Responsive Styles and Customizing Breakpoints](/docs/features/responsive-styles).
 
 ```js
 // theme.js

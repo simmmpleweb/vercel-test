@@ -1,3 +1,3 @@
-# Horizon UI Docs
+# Chakra UI Docs
 
-The Documentation website for Horizon UI
+The Documentation website for chakra-ui.com

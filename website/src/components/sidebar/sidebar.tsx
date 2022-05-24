@@ -18,6 +18,7 @@ import { Routes } from "utils/get-route-context"
 import { convertBackticksToInlineCode } from "utils/convert-backticks-to-inline-code"
 import SidebarCategory from "./sidebar-category"
 import SidebarLink from "./sidebar-link"
+import { DocsIcon, GuidesIcon, TeamIcon, ResourcesIcon } from "./sidebar-icons"
 
 export type SidebarContentProps = Routes & {
   pathname?: string
@@ -78,11 +79,9 @@ export function SidebarContent(props: SidebarContentProps) {
                             lineHeight="tall"
                             fontSize="10px"
                             variant="solid"
-                            color="white"
-                            borderRadius="4px"
-                            bg={useColorModeValue("brand.500", "brand.400")}
+                            colorScheme="purple"
                           >
-                            PRO
+                            New
                           </Badge>
                         )}
                       </SidebarLink>
@@ -107,7 +106,6 @@ const MainNavLink = ({ href, icon, children }) => {
   return (
     <NextLink href={href} passHref>
       <Flex
-        display="none"
         as="a"
         align="center"
         fontSize="sm"
@@ -117,7 +115,7 @@ const MainNavLink = ({ href, icon, children }) => {
         color={active ? linkColor : "gray.500"}
         _hover={{ color: linkColor }}
       >
-        <Center w="6" h="6" bg="brand.400" rounded="base" mr="3">
+        <Center w="6" h="6" bg="teal.400" rounded="base" mr="3">
           {icon}
         </Center>
         {children}
@@ -128,9 +126,9 @@ const MainNavLink = ({ href, icon, children }) => {
 
 const mainNavLinks = [
   {
-    href: "/docs/introduction",
+    icon: <DocsIcon />,
+    href: "/docs/getting-started",
     label: "Docs",
-    icon: " ",
   },
 ]
 

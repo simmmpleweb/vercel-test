@@ -38,12 +38,12 @@ function NavLink({ href, children }) {
         rounded="md"
         transition="0.2s all"
         fontWeight={isActive ? "semibold" : "medium"}
-        bg={isActive ? "brand.400" : undefined}
+        bg={isActive ? "teal.400" : undefined}
         borderWidth={isActive ? undefined : "1px"}
         color={isActive ? "white" : undefined}
         _hover={{
           bg: isActive
-            ? "brand.500"
+            ? "teal.500"
             : useColorModeValue("gray.100", "whiteAlpha.100"),
         }}
       >
@@ -111,11 +111,21 @@ export function MobileNavContent(props: MobileNavContentProps) {
             >
               <Box>
                 <Flex justify="space-between" px="6" pt="5" pb="4">
-                  <Logo sx={{ rect: { fill: "brand.300" } }} />
+                  <Logo sx={{ rect: { fill: "teal.300" } }} />
                   <HStack spacing="5">
+                    <DownloadButton display="flex" />
                     <CloseButton ref={closeBtnRef} onClick={onClose} />
                   </HStack>
                 </Flex>
+                <Box px="6" pb="6" pt="2" shadow={shadow}>
+                  <HStack>
+                    <NavLink href="/docs/getting-started">Docs</NavLink>
+                    <NavLink href="/guides/integrations/with-cra">
+                      Guides
+                    </NavLink>
+                    <NavLink href="/team">Team</NavLink>
+                  </HStack>
+                </Box>
               </Box>
 
               <ScrollView
@@ -123,39 +133,6 @@ export function MobileNavContent(props: MobileNavContentProps) {
                   setShadow(scrolled ? "md" : undefined)
                 }}
               >
-                <Flex justifyContent="center" alignItems="center" mb="20px">
-                  <DownloadButton display="flex" w="fit-content" me="20px" />
-                  <Box
-                    display={{ base: "flex", lg: "none" }}
-                    alignItems="center"
-                    as="a"
-                    aria-label="See Pricing"
-                    href="https://horizon-ui.com/#pricing"
-                    target="_blank"
-                    bg={useColorModeValue("brand.500", "brand.400")}
-                    px="24px"
-                    minH="48px"
-                    borderRadius="12px"
-                    fontSize="sm"
-                    color="white"
-                    outline="0"
-                    transition="all 0.3s"
-                    w="fit-content"
-                    _hover={{
-                      bg: useColorModeValue("brand.700", "brand.300"),
-                    }}
-                    _active={{
-                      borderColor: "brand.200",
-                    }}
-                    _focus={{
-                      boxShadow: "outline",
-                    }}
-                  >
-                    <Box as="strong" lineHeight="inherit" fontWeight="semibold">
-                      See Pricing
-                    </Box>
-                  </Box>
-                </Flex>
                 <SidebarContent
                   pathname={pathname}
                   routes={getRoutes(pathname)}

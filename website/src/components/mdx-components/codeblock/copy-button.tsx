@@ -1,4 +1,4 @@
-import { Button, ButtonProps, useClipboard, useColorModeValue} from "@chakra-ui/react"
+import { Button, ButtonProps, useClipboard } from "@chakra-ui/react"
 import React from "react"
 
 interface CopyButtonProps extends ButtonProps {
@@ -13,8 +13,7 @@ function CopyButton({ code, ...props }: CopyButtonProps) {
       size="sm"
       position="absolute"
       textTransform="uppercase"
-      color="white"
-      bg={useColorModeValue("brand.500", "brand.400")}
+      colorScheme="teal"
       fontSize="xs"
       height="24px"
       top={0}
@@ -22,15 +21,6 @@ function CopyButton({ code, ...props }: CopyButtonProps) {
       right="1.25em"
       {...props}
       onClick={onCopy}
-      _hover={{
-        bg: useColorModeValue("brand.600", "brand.300"),
-      }}
-      _active={{
-        bg: useColorModeValue("brand.700", "brand.300"),
-      }}
-      _focus={{
-        bg: useColorModeValue("brand.700", "brand.300"),
-      }}
     >
       {hasCopied ? "copied" : "copy"}
     </Button>

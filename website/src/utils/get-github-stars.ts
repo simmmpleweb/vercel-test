@@ -7,13 +7,14 @@ const formatter = Intl.NumberFormat("en", {
   maximumFractionDigits: 1,
 })
 
+// "https://api.npms.io/v2/package/@chakra-ui%2Freact"
 export async function getGithubStars() {
   let count: number
 
   try {
     const repo = await octokit.repos.get({
-      owner: "simmmple-web",
-      repo: "horizon-ui-chakra",
+      owner: "chakra-ui",
+      repo: "chakra-ui",
     })
     count = repo.data.stargazers_count
   } catch (error) {

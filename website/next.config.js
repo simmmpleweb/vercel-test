@@ -5,7 +5,6 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 const defaultConfig = {
   target: "serverless",
-  basePath: "/documentation",
   webpack: (config) => ({
     ...config,
     externals: [...config.externals, "sharp"],

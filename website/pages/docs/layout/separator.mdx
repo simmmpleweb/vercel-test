@@ -1,5 +1,5 @@
 ---
-title: Chakra UI Separator - Horizon UI
+title: Separator
 package: "@chakra-ui/layout"
 image: "components/box.svg"
 description: "The separator is a div used for visually separating components."
@@ -9,13 +9,14 @@ The separator composes `Flex` and is used as a separation element.
 
 ## Import
 
-```tsx
-import { VSeparator, HSeparator } from "components/Separator/Separator"
+```js
+import { Separator } from "components/Separator/Separator"
 ```
 
-### Usage - HSeparator
+### Usage
 
 ```jsx
+
 function Example() {
   const property = {
     imageUrl: "https://bit.ly/2Z4KKcF",
@@ -31,7 +32,7 @@ function Example() {
   return (
     <Box>
       <Text align="center" mb="20px">
-        This is before the HSeparator
+        This is on above the Separator
       </Text>
       <Flex
         h="1px"
@@ -39,7 +40,7 @@ function Example() {
         bg="linear-gradient(90deg, rgba(224, 225, 226, 0) 0%, #E0E1E2 49.52%, rgba(224, 225, 226, 0) 100%)"
         mb="20px"
       ></Flex>
-      <Text align="center">This is after the HSeparator</Text>
+      <Text align="center">This is on below the Separator</Text>
     </Box>
   )
 }
@@ -50,46 +51,11 @@ function Example() {
 function Example() {
   return (
       <Text align="center" mb="20px">
-        This is before the HSeparator
+        This is on above the Separator
       </Text>
-      </HSeparator>
+      </Separator />
       <Text align="center">
-        This is after the HSeparator
-      </Text>
-  )
-}
-```
-
-### Usage - VSeparator
-
-```jsx
-function Example() {
-  return (
-    <Flex alignItems="center" width="100%" height="100px">
-      <Text align="center" mb="20px" mr="20px">
-        This is before the VSeparator
-      </Text>
-      <Flex
-        w="1px"
-        bg="linear-gradient(0deg, rgba(224, 225, 226, 0) 0%, #E0E1E2 49.52%, rgba(224, 225, 226, 0.15625) 99.04%)"
-        mr="20px"
-      ></Flex>
-      <Text align="center">This is after the VSeparator</Text>
-    </Flex>
-  )
-}
-```
-
-```tsx
-
-function Example() {
-  return (
-      <Text align="center" mb="20px">
-        This is before the VSeparator
-      </Text>
-      </VSeparator />
-      <Text align="center">
-        This is after the VSeparator
+        This is on below the Separator
       </Text>
   )
 }

@@ -1,5 +1,5 @@
 ---
-title: Chakra UI Box - Horizon UI
+title: Box
 package: "@chakra-ui/layout"
 image: "components/box.svg"
 description:
@@ -7,8 +7,8 @@ description:
   components are built. By default, it renders a `div` element
 ---
 
-Box is the most abstract component on top of which all other Horizon UI
-Dashboard components are built. By default, it renders a `div` element.
+Box is the most abstract component on top of which all other Purity UI Dashboard
+components are built. By default, it renders a `div` element.
 
 <br />
 
@@ -21,7 +21,7 @@ Dashboard components are built. By default, it renders a `div` element.
 
 ## Import
 
-```tsx
+```js
 import { Box } from "@chakra-ui/react"
 ```
 
@@ -42,6 +42,7 @@ import { Box } from "@chakra-ui/react"
 ### Usage
 
 ```jsx
+
 function Example() {
   const property = {
     imageUrl: "https://bit.ly/2Z4KKcF",
@@ -60,7 +61,7 @@ function Example() {
 
       <Box p="6">
         <Box d="flex" alignItems="baseline">
-          <Badge borderRadius="full" px="2" colorScheme="brand">
+          <Badge borderRadius="full" px="2" colorScheme="teal">
             New
           </Badge>
           <Box
@@ -98,7 +99,7 @@ function Example() {
             .map((_, i) => (
               <StarIcon
                 key={i}
-                color={i < property.rating ? "brand.500" : "gray.300"}
+                color={i < property.rating ? "teal.500" : "gray.300"}
               />
             ))}
           <Box as="span" ml="2" color="gray.600" fontSize="sm">
@@ -112,6 +113,7 @@ function Example() {
 ```
 
 ```tsx
+
 function Example() {
   const property = {
     imageUrl: "https://bit.ly/2Z4KKcF",
@@ -130,7 +132,7 @@ function Example() {
 
       <Box p="6">
         <Box d="flex" alignItems="baseline">
-          <Badge borderRadius="full" px="2" colorScheme="brand">
+          <Badge borderRadius="full" px="2" colorScheme="teal">
             New
           </Badge>
           <Box
@@ -168,7 +170,7 @@ function Example() {
             .map((_, i) => (
               <StarIcon
                 key={i}
-                color={i < property.rating ? "brand.500" : "gray.300"}
+                color={i < property.rating ? "teal.500" : "gray.300"}
               />
             ))}
           <Box as="span" ml="2" color="gray.600" fontSize="sm">

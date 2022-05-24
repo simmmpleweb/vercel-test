@@ -1,60 +1,65 @@
-const baseUrl = "https://github.com/horizon-ui/horizon-ui-chakra/"
+const baseUrl = "https://github.com/creativetimofficial/purity-ui-dashboard"
 
 const siteConfig = {
-  copyright: `Copyright © ${new Date().getFullYear()} Horizon UI. All Rights Reserved.`,
+  copyright: `Copyright © ${new Date().getFullYear()} Creative Tim. All Rights Reserved.`,
   algolia: {
     apiKey: "655968634437471",
-    indexName: "horizon-ui-chakra",
+    indexName: "purity-ui-dashboard",
     inputSelector: "#algolia-search",
   },
   author: {
-    name: "Horizon",
-    github: "https://github.com/horizon-ui",
-    twitter: "https://twitter.com/simmmple_web",
-    email: "",
+    name: "Creative Tim & Simmmple",
+    github: "https://github.com/creativetimofficial",
+    twitter: "https://twitter.com/creativetim",
+    email: "sage@adebayosegun.com",
   },
   repo: {
     url: baseUrl,
     editUrl: `${baseUrl}/edit/main/website/pages`,
     blobUrl: `${baseUrl}/blob/main`,
   },
-  livePreview: {
-    url: "https://horizon-ui.com/horizon-ui-chakra/",
+  freeDownload: {
+    url:
+      "https://www.creative-tim.com/product/purity-ui-dashboard?ref=docs-pud",
   },
+  youtube: "https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w",
   seo: {
-    title: "Horizon UI - Trendiest Open-Source Framework based on Chakra UI",
-    titleTemplate: "%s",
+    title: "Purity UI Dashboard",
+    titleTemplate: "%s - Purity UI Dashboard",
     description:
-      "Start building your dashboard with Horizon UI, the most trendiest Open-Source Framework based on Chakra UI!",
-    siteUrl: "https://horizon-ui.com/",
+      "Simple, Modular and Accessible UI Components for your React Applications.",
+    siteUrl:
+      "https://www.creative-tim.com/product/purity-ui-dashboard?ref=docs-pud",
     twitter: {
-      handle: "@simmmple",
-      site: "@simmmple",
+      handle: "@creativetim",
+      site: "@creativetim",
       cardType: "summary_large_image",
     },
     openGraph: {
       type: "website",
       locale: "en_US",
-      url: "https://horizon-ui.com/",
-      title: "Horizon UI",
+      url: "https://www.creative-tim.com?ref=docs-pud",
+      title: "Purity UI Dashboard",
       description:
-        "Horizon UI - Trendiest Open-Source Framework based on Chakra UI",
+        "Purity UI Dashboard is a beautiful Chakra UI ReactJS admin dashboard with a large number of components, designed to look beautiful, clean and organized. If you are looking for a tool to manage dates about your business, this dashboard is the thing for you.",
       site_name:
-        "Start building your dashboard with Horizon UI, the most trendiest Open-Source Framework based on Chakra UI!",
+        "Most trendiest, complex and innovative Dashboard Made by Creative Tim & Simmmple. Check our latest Free ReactJS Dashboard based on Chakra UI.",
       images: [
         {
-          url: "https://i.ibb.co/fdyTwz1/introduction-image-2.png",
+          url:
+            "https://i.ibb.co/7NXMZQS/Cover-Purity-Chakra-FREE-Thumbnail.png",
           width: 1240,
           height: 480,
           alt:
-            "Start building your dashboard with Horizon UI, the most trendiest Open-Source Framework based on Chakra UI!",
+            "Most trendiest, complex and innovative Dashboard Made by Creative Tim & Simmmple. Check our latest Free ReactJS Dashboard based on Chakra UI.",
         },
         {
-          url: "https://i.ibb.co/fdyTwz1/introduction-image-2.png",
+          url:
+            "https://i.ibb.co/7NXMZQS/Cover-Purity-Chakra-FREE-Thumbnail.png",
           width: 1012,
           height: 506,
           alt:
-            "Start building your dashboard with Horizon UI, the most trendiest Open Source Framework based on Chakra UI!",
+            "Most trendiest, complex and innovative Dashboard Made by Creative Tim & Simmmple. Check our latest Free ReactJS Dashboard based on Chakra UI.",
         },
       ],
     },

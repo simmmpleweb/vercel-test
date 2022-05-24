@@ -1,5 +1,6 @@
 import { Button, Heading, Text, VStack } from "@chakra-ui/react"
 import { FaHome } from "react-icons/fa"
+import { AdBanner } from "components/chakra-pro/ad-banner"
 import Header from "components/header"
 import SEO from "components/seo"
 import * as React from "react"
@@ -9,6 +10,7 @@ const NotFoundPage = () => {
   return (
     <>
       <SEO title="404: Not found" description="Page not found" />
+      <AdBanner />
       <Header />
       <VStack
         justify="center"
@@ -26,7 +28,7 @@ const NotFoundPage = () => {
             as="a"
             aria-label="Back to Home"
             leftIcon={<FaHome />}
-            colorScheme="brand"
+            colorScheme="teal"
             size="lg"
           >
             Back to Home

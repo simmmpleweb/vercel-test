@@ -5,7 +5,7 @@ export function removeFromLast(path: string, key: string) {
   return index === -1 ? path : path.substring(0, index)
 }
 
-export function findRouteByPath(path: string, routes): RouteItem {
+export function findRouteByPath(path: string, routes: RouteItem[]): RouteItem {
   for (const route of routes) {
     if (route.path && removeFromLast(route.path, ".") === path) {
       return route

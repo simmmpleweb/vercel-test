@@ -1,5 +1,5 @@
 ---
-title: Chakra UI Timeline - Horizon UI
+title: Timeline
 package: "@chakra-ui/data-display"
 image: "components/box.svg"
 description:
@@ -12,7 +12,7 @@ structure.
 
 ## Import
 
-```tsx
+```js
 import TimelineRow from "components/Tables/TimelineRow"
 // You should also import some data for the timeline
 import { timelineData } from "variables/general"
@@ -54,7 +54,7 @@ function TimelineExample() {
             Orders overview
           </Text>
           <Text fontSize="sm" color="gray.400" fontWeight="normal">
-            <Text fontWeight="bold" as="span" color="brand.300">
+            <Text fontWeight="bold" as="span" color="teal.300">
               +30%
             </Text>{" "}
             this month.
@@ -80,7 +80,7 @@ function TimelineExample() {
             <Flex direction="column" h="100%">
               <AddIcon
                 bg={bgIconColor}
-                color="brand.300"
+                color="teal.300"
                 h={"30px"}
                 w={"26px"}
                 pr="6px"
@@ -203,7 +203,7 @@ const timelineData = [
     logo: AddIcon,
     title: "$2400, Design changes",
     date: "22 DEC 7:20 PM",
-    color: "brand.300",
+    color: "teal.300",
   },
   {
     logo: ChatIcon,
@@ -238,7 +238,7 @@ function TimelineExample() {
             Orders overview
           </Text>
           <Text fontSize="sm" color="gray.400" fontWeight="normal">
-            <Text fontWeight="bold" as="span" color="brand.300">
+            <Text fontWeight="bold" as="span" color="teal.300">
               +30%
             </Text>{" "}
             this month.

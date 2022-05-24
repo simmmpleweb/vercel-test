@@ -3,22 +3,12 @@ async function redirect() {
     // GENERAL
     {
       source: "/docs",
-      destination: "/docs/introduction",
+      destination: "/docs/getting-started",
       permanent: true,
     },
     {
-      source: "/changelog",
-      destination: "/docs/changelog",
-      permanent: true,
-    },
-    {
-      source: "/installation",
-      destination: "/docs/installation",
-      permanent: true,
-    },
-    {
-      source: "/introduction",
-      destination: "/docs/introduction",
+      source: "/getting-started",
+      destination: "/docs/getting-started",
       permanent: true,
     },
     {
@@ -73,16 +63,6 @@ async function redirect() {
       permanent: true,
     },
     {
-      source: "/pin-input",
-      destination: "/docs/form/pin-input",
-      permanent: true,
-    },
-    {
-      source: "/range-slider",
-      destination: "/docs/form/range-slider",
-      permanent: true,
-    },
-    {
       source: "/cards",
       destination: "/docs/layout/cards",
       permanent: true,
@@ -100,41 +80,6 @@ async function redirect() {
     {
       source: "/portal",
       destination: "/docs/components/portal",
-      permanent: true,
-    },
-    {
-      source: "/fields",
-      destination: "/docs/components/fields",
-      permanent: true,
-    },
-    {
-      source: "/circular-slider",
-      destination: "/docs/components/circular-slider",
-      permanent: true,
-    },
-    {
-      source: "/dropzone",
-      destination: "/docs/components/dropzone",
-      permanent: true,
-    },
-    {
-      source: "/map",
-      destination: "/docs/components/map",
-      permanent: true,
-    },
-    {
-      source: "/range-slider",
-      destination: "/docs/components/range-slider",
-      permanent: true,
-    },
-    {
-      source: "/actions",
-      destination: "/docs/components/actions",
-      permanent: true,
-    },
-    {
-      source: "/data-display",
-      destination: "/docs/components/data-display",
       permanent: true,
     },
     {
@@ -224,11 +169,6 @@ async function redirect() {
       permanent: true,
     },
     {
-      source: "/alerts",
-      destination: "/docs/feedback/alerts",
-      permanent: true,
-    },
-    {
       source: "/pseudobox",
       // deprecated, moved to box
       destination: "/docs/layout/box",
@@ -267,36 +207,6 @@ async function redirect() {
     {
       source: "/text",
       destination: "/docs/typography/text",
-      permanent: true,
-    },
-    {
-      source: "/react-globe",
-      destination: "/docs/components/react-globe",
-      permanent: true,
-    },
-    {
-      source: "/data-tables",
-      destination: "/docs/components/data-tables",
-      permanent: true,
-    },
-    {
-      source: "/calendar",
-      destination: "/docs/components/calendar",
-      permanent: true,
-    },
-    {
-      source: "/kanban",
-      destination: "/docs/components/kanban",
-      permanent: true,
-    },
-    {
-      source: "/wizard",
-      destination: "/docs/components/wizard",
-      permanent: true,
-    },
-    {
-      source: "/quill",
-      destination: "/docs/components/quill",
       permanent: true,
     },
   ]

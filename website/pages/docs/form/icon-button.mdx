@@ -1,5 +1,5 @@
 ---
-title: Chakra UI Icon Button - Horizon UI
+title: Icon Button
 package: "@chakra-ui/button"
 description: Icon button renders an icon within in a button
 ---
@@ -11,26 +11,18 @@ screen readers can give meaning to the button.
 
 ## Import
 
-```tsx
+```js
 import { IconButton } from "@chakra-ui/react"
 ```
 
 ## Usage
 
 ```jsx
-<IconButton
-  aria-label="Search database"
-  borderRadius="10px"
-  icon={<SearchIcon />}
-/>
+<IconButton aria-label="Search database" icon={<SearchIcon />} />
 ```
 
 ```tsx
-<IconButton
-  aria-label="Search database"
-  borderRadius="10px"
-  icon={<SearchIcon />}
-/>
+<IconButton aria-label="Search database" icon={<SearchIcon />} />
 ```
 
 ### Button Colors
@@ -40,18 +32,16 @@ component, so we can use `colorScheme` prop to change the color of the button.
 
 ```jsx
 <IconButton
-  colorScheme="brand"
+  colorScheme="blue"
   aria-label="Search database"
-  borderRadius="10px"
   icon={<SearchIcon />}
 />
 ```
 
 ```tsx
 <IconButton
-  colorScheme="brand"
+  colorScheme="blue"
   aria-label="Search database"
-  borderRadius="10px"
   icon={<SearchIcon />}
 />
 ```
@@ -63,9 +53,8 @@ button.
 
 ```jsx
 <IconButton
-  colorScheme="brand"
+  colorScheme="teal"
   aria-label="Call Fred"
-  borderRadius="10px"
   size="lg"
   icon={<PhoneIcon />}
 />
@@ -73,9 +62,8 @@ button.
 
 ```tsx
 <IconButton
-  colorScheme="brand"
+  colorScheme="teal"
   aria-label="Call Fred"
-  borderRadius="10px"
   size="lg"
   icon={<PhoneIcon />}
 />
@@ -89,8 +77,7 @@ button.
 ```jsx
 <IconButton
   variant="outline"
-  colorScheme="brand"
-  borderRadius="10px"
+  colorScheme="teal"
   aria-label="Send email"
   icon={<EmailIcon />}
 />
@@ -99,8 +86,7 @@ button.
 ```tsx
 <IconButton
   variant="outline"
-  colorScheme="brand"
-  borderRadius="10px"
+  colorScheme="teal"
   aria-label="Send email"
   icon={<EmailIcon />}
 />
@@ -115,8 +101,7 @@ the button.
 ```jsx
 <IconButton
   variant="outline"
-  colorScheme="brand"
-  borderRadius="10px"
+  colorScheme="teal"
   aria-label="Call Fred"
   fontSize="20px"
   icon={<MdPhone />}
@@ -126,8 +111,7 @@ the button.
 ```tsx
 <IconButton
   variant="outline"
-  colorScheme="brand"
-  borderRadius="10px"
+  colorScheme="teal"
   aria-label="Call Fred"
   fontSize="20px"
   icon={<MdPhone />}
