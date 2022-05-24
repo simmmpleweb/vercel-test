@@ -1,5 +1,5 @@
 {
-  "name": "chakra-ui",
+  "name": "docs",
   "private": true,
   "workspaces": {
     "packages": [
@@ -18,9 +18,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chakra-ui/chakra-ui.git"
+    "url": "git+https://github.com/horizon-ui/vercel-test"
   },
-  "author": "Segun Adebayo <sage@adebayosegun.com>",
+  "author": "Horizon UI",
   "license": "MIT",
   "scripts": {
     "pkg": "manypkg run",

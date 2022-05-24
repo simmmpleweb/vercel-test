@@ -1,10 +1,10 @@
 ---
 title: Changelog
-description: The changelog for Purity UI Dashboard React
+description: The changelog for Horizon UI React
 slug: "/changelog"
 ---
 
-The Changelog gives an overview of the meaningful changes we've made to Purity
+The Changelog gives an overview of the meaningful changes we've made to Horizon
 UI Dashboard as we keep driving for better performance and best-in-class
 developer experience.
 
@@ -15,7 +15,7 @@ To better understand the changelog, here are some legends we use:
 - 🐛 Bug fix
 - 🛠 Refactor
 
-## 20-08-2021 - Official Release
+## 18-04-2022 - Official Release
 
 **Form Control** `v1.0.0`
 
