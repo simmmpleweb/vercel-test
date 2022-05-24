@@ -1,224 +1,410 @@
 ---
-title: Cards
+title: Chakra UI Cards - Horizon UI
 package: "@chakra-ui/layout"
 image: "components/box.svg"
-description: "Card is the main Purity's layout component."
+description: "Card is the main Horizon's layout component."
 ---
 
 Our cards provide a flexible and extensible content container with multiple
-variants and options. All the Card components compose `Box`. The `Card` usually
-contains a `CardHeader` and a `CardBody`.
+variants and options. All the Card components compose `Box`.
 
 ## Import
 
-```js
-import Card from "components/Card/Card"
-import CardBody from "components/Card/CardBody"
-import CardHeader from "components/Card/CardHeader"
+```tsx
+import Card from "components/card/Card"
 ```
 
-### Usage
+## Course
 
 ```jsx
-
-
-function CardExample() {
-  const exampleBg = useColorModeValue("gray.200", "gray.800")
-  const bg = useColorModeValue("gray.50", "gray.700")
-  const textColor = useColorModeValue("gray.700", "white")
-  const emailColor = useColorModeValue("gray.400", "gray.300")
+function Course() {
+  const textColor = useColorModeValue("#1B2559", "white")
+  const textBrand = useColorModeValue("brand.500", "white")
+  const bgBadge = useColorModeValue("#F4F7FE", "whiteAlpha.50")
   return (
-    <>
-      <Box
-        display="flex"
-        flexDirection="column"
-        width="100%"
-        position="relative"
-        minWidth="0px"
-        wordWrap="break-word"
-        backgroundClip="border-box"
-        bg={bg}
-        width="100%"
-        boxShadow="0px 3.5px 5.5px rgba(0, 0, 0, 0.02)"
-        borderRadius="15px"
-        p="1rem"
-        my={{ sm: "24px", xl: "0px" }}
-      >
-        <Box
-          display="flex"
-          width="100%"
-          pt="28px"
-          px="21px"
-          p="12px 5px"
-          mb="12px"
+    <Flex p="20px" h="max-content" maxH="220px">
+      <Flex direction={{ base: "column", md: "column", xl: "row" }}>
+        <Flex
+          bg="linear-gradient(115.07deg, #29E9F5 -9.41%, #7A64FF 28.04%, #FF508B 71.85%, #FD6D53 112.49%, #FD6D53 112.49%)"
+          minW="180px"
+          maxH="220px"
+          justify="center"
+          align="center"
+          borderRadius="20px"
+          me="34px"
         >
-          <Text fontSize="lg" color={textColor} fontWeight="bold">
-            Profile Information
-          </Text>
-        </Box>
-        <Box width="100%" px="21px" p="0px 5px">
-          <Flex direction="column">
-            <Text fontSize="md" color="gray.500" fontWeight="400" mb="30px">
-              Hi, I’m Esthera Jackson, Decisions: If you can’t decide, the
-              answer is no. If two equally difficult paths, choose the one more
-              painful in the short term (pain avoidance is creating an illusion
-              of equality).
-            </Text>
-            <Flex alignItems="center" mb="18px">
-              <Text fontSize="md" color={textColor} fontWeight="bold" me="10px">
-                Full Name:{" "}
+          <CheckIcon color="white" w="32px" h="32px" />
+        </Flex>
+        <Flex
+          justify="space-between"
+          flexDirection="column"
+          mb="auto"
+          pb={{ base: "0px", md: "0px" }}
+        >
+          <Flex display={{ base: "block", xl: "flex" }}>
+            <Box direction="column" w={{ xl: "68%" }} mb="25px">
+              <Text
+                color={textColor}
+                fontSize="22px"
+                mb="10px"
+                fontWeight="700"
+              >
+                Instagram Marketing 2022: Complete Guide To Growth
               </Text>
-              <Text fontSize="md" color="gray.500" fontWeight="400">
-                Esthera Jackson
+              <Text
+                color="secondaryGray.600"
+                fontSize="14px"
+                fontWeight="400"
+                me="14px"
+              >
+                Attract Hyper-Targeted Instagram Followers, Convert Followers to
+                Paying Customers, & Expand your Brand Using Instagram
               </Text>
-            </Flex>
-            <Flex alignItems="center" mb="18px">
-              <Text fontSize="md" color={textColor} fontWeight="bold" me="10px">
-                Mobile:{" "}
+            </Box>
+            <Flex mt="14px" ms="auto" mb={{ base: "20px", xl: "0px" }}>
+              <Text
+                color="secondaryGray.600"
+                fontSize={{
+                  base: "md",
+                }}
+                fontWeight="500"
+              >
+                Mon •
               </Text>
-              <Text fontSize="md" color="gray.500" fontWeight="400">
-                (44) 123 1234 123
+              <Text
+                color={textColor}
+                fontSize={{
+                  base: "md",
+                }}
+                fontWeight="500"
+                ms="4px"
+              >
+                January 05
               </Text>
-            </Flex>
-            <Flex alignItems="center" mb="18px">
-              <Text fontSize="md" color={textColor} fontWeight="bold" me="10px">
-                Email:{" "}
-              </Text>
-              <Text fontSize="md" color="gray.500" fontWeight="400">
-                esthera@simmmple.com
-              </Text>
-            </Flex>
-            <Flex alignItems="center" mb="18px">
-              <Text fontSize="md" color={textColor} fontWeight="bold" me="10px">
-                Location:{" "}
-              </Text>
-              <Text fontSize="md" color="gray.500" fontWeight="400">
-                United States
-              </Text>
-            </Flex>
-            <Flex alignItems="center" mb="18px">
-              <Text fontSize="md" color={textColor} fontWeight="bold" me="10px">
-                Social Media:{" "}
-              </Text>
-              <Flex>
-                <Link
-                  href="#"
-                  color="teal.300"
-                  fontSize="lg"
-                  me="10px"
-                  _hover={{ color: "teal.300" }}
-                >
-                  <PhoneIcon />
-                </Link>
-                <Link
-                  href="#"
-                  color="teal.300"
-                  fontSize="lg"
-                  me="10px"
-                  _hover={{ color: "teal.300" }}
-                >
-                  <PhoneIcon />
-                </Link>
-                <Link
-                  href="#"
-                  color="teal.300"
-                  fontSize="lg"
-                  me="10px"
-                  _hover={{ color: "teal.300" }}
-                >
-                  <PhoneIcon />
-                </Link>
-              </Flex>
             </Flex>
           </Flex>
-        </Box>
-      </Box>
-    </>
+          <Flex w="100%" flexWrap="wrap">
+            <Badge
+              bg={bgBadge}
+              textAlign="center"
+              mb={{ base: "20px", md: "0px" }}
+              color={textBrand}
+              me="10px"
+              h="max-content"
+            >
+              Social Media Marketing
+            </Badge>
+            <Flex
+              align="center"
+              ms={{ base: "0px", xl: "auto" }}
+              pe={{ base: "10px", md: "0px" }}
+            >
+              <TimeIcon color={textColor} me="6px" />
+              <Text
+                color={textColor}
+                fontSize={{
+                  base: "sm",
+                }}
+                fontWeight="500"
+                me="14px"
+              >
+                1h 30 min
+              </Text>
+            </Flex>
+          </Flex>
+        </Flex>
+      </Flex>
+    </Flex>
   )
 }
 ```
 
 ```tsx
-<Card p="1rem" my={{ sm: "24px", xl: "0px" }}>
-  <CardHeader p="12px 5px" mb="12px">
-    <Text fontSize="lg" color={textColor} fontWeight="bold">
-      Profile Information
-    </Text>
-  </CardHeader>
-  <CardBody p="0px 5px">
-    <Flex direction="column">
-      <Text fontSize="md" color="gray.500" fontWeight="400" mb="30px">
-        Hi, I’m Esthera Jackson, Decisions: If you can’t decide, the answer is
-        no. If two equally difficult paths, choose the one more painful in the
-        short term (pain avoidance is creating an illusion of equality).
-      </Text>
-      <Flex alignItems="center" mb="18px">
-        <Text fontSize="md" color={textColor} fontWeight="bold" me="10px">
-          Full Name:{" "}
-        </Text>
-        <Text fontSize="md" color="gray.500" fontWeight="400">
-          Esthera Jackson
-        </Text>
-      </Flex>
-      <Flex alignItems="center" mb="18px">
-        <Text fontSize="md" color={textColor} fontWeight="bold" me="10px">
-          Mobile:{" "}
-        </Text>
-        <Text fontSize="md" color="gray.500" fontWeight="400">
-          (44) 123 1234 123
-        </Text>
-      </Flex>
-      <Flex alignItems="center" mb="18px">
-        <Text fontSize="md" color={textColor} fontWeight="bold" me="10px">
-          Email:{" "}
-        </Text>
-        <Text fontSize="md" color="gray.500" fontWeight="400">
-          esthera@simmmple.com
-        </Text>
-      </Flex>
-      <Flex alignItems="center" mb="18px">
-        <Text fontSize="md" color={textColor} fontWeight="bold" me="10px">
-          Location:{" "}
-        </Text>
-        <Text fontSize="md" color="gray.500" fontWeight="400">
-          United States
-        </Text>
-      </Flex>
-      <Flex alignItems="center" mb="18px">
-        <Text fontSize="md" color={textColor} fontWeight="bold" me="10px">
-          Social Media:{" "}
-        </Text>
-        <Flex>
-          <Link
-            href="#"
-            color="teal.300"
-            fontSize="lg"
-            me="10px"
-            _hover={{ color: "teal.300" }}
-          >
-            <Icon as={FaFacebook} />
-          </Link>
-          <Link
-            href="#"
-            color="teal.300"
-            fontSize="lg"
-            me="10px"
-            _hover={{ color: "teal.300" }}
-          >
-            <Icon as={FaInstagram} />
-          </Link>
-          <Link
-            href="#"
-            color="teal.300"
-            fontSize="lg"
-            me="10px"
-            _hover={{ color: "teal.300" }}
-          >
-            <Icon as={FaTwitter} />
-          </Link>
+import Course from "components/card/Course"
+```
+
+```tsx
+<Course
+  bgBox="linear-gradient(115.07deg, #29E9F5 -9.41%, #7A64FF 28.04%, #FF508B 71.85%, #FD6D53 112.49%, #FD6D53 112.49%)"
+  icon={TimeIcon}
+  title="Instagram Marketing 2022: Complete Guide To Growth"
+  desc="Attract Hyper-Targeted Instagram Followers, Convert Followers to Paying Customers, & Expand your Brand Using Instagram"
+  day="Mon"
+  date="January 05"
+  topics={["Social Media Marketing", "Instagram Marketing"]}
+  time="1h 30 min"
+/>
+```
+
+---
+
+## Mastercard
+
+```jsx
+function Mastercard() {
+  return (
+    <Flex
+      backgroundImage="https://i.ibb.co/hVFV8Bd/Debit.png"
+      backgroundRepeat="no-repeat"
+      borderRadius="20px"
+      bgSize="cover"
+      alignSelf="center"
+      w={{ base: "100%", md: "60%", xl: "99%" }}
+      bgPosition="10%"
+      mx="auto"
+      p="20px"
+    >
+      <Flex direction="column" color="white" h="100%" w="100%">
+        <Flex justify="space-between" align="center" mb="37px">
+          <Text fontSize="2xl" fontWeight="bold">
+            Glassy.
+          </Text>
+          <InfoIcon w="24px" h="auto" color="white" />
+        </Flex>
+        <Spacer />
+        <Flex direction="column">
+          <Box>
+            <Text fontSize={{ sm: "xl", lg: "lg", xl: "xl" }} fontWeight="bold">
+              7812 XXXX XXXX XXXX
+            </Text>
+          </Box>
+          <Flex mt="14px">
+            <Flex direction="column" me="34px">
+              <Text fontSize="xs">VALID THRU</Text>
+              <Text fontSize="sm" fontWeight="500">
+                05/24
+              </Text>
+            </Flex>
+            <Flex direction="column">
+              <Text fontSize="xs">CVV</Text>
+              <Text fontSize="sm" fontWeight="500">
+                09X
+              </Text>
+            </Flex>
+          </Flex>
         </Flex>
       </Flex>
     </Flex>
-  </CardBody>
-</Card>
+  )
+}
+```
+
+```tsx
+import Mastercard from "components/card/Mastercard"
+```
+
+```tsx
+<Mastercard number="7812 XXXX XXXX XXXX" cvv="09X" exp="05/24" />
+```
+
+---
+
+## Mini Statistics
+
+```jsx
+function MiniStatistics() {
+  const textColor = useColorModeValue("secondaryGray.900", "white")
+  const textColorSecondary = "secondaryGray.600"
+
+  return (
+    <Flex py="15px">
+      <Flex
+        my="auto"
+        h="100%"
+        align={{ base: "center", xl: "start" }}
+        justify={{ base: "center", xl: "center" }}
+      >
+        <Stat my="auto" ms="18px">
+          <StatLabel
+            lineHeight="100%"
+            color={textColorSecondary}
+            fontSize={{
+              base: "sm",
+            }}
+          >
+            Sales
+          </StatLabel>
+          <StatNumber
+            color={textColor}
+            fontSize={{
+              base: "2xl",
+            }}
+          >
+            $574.34
+          </StatNumber>
+          <Flex align="center">
+            <Text color="green.500" fontSize="xs" fontWeight="700" me="5px">
+              +23%
+            </Text>
+            <Text color="secondaryGray.600" fontSize="xs" fontWeight="400">
+              since last month
+            </Text>
+          </Flex>
+        </Stat>
+      </Flex>
+    </Flex>
+  )
+}
+```
+
+```tsx
+import MiniStatistics from "components/card/MiniStatistics"
+```
+
+```tsx
+<MiniStatistics growth="+23%" name="Sales" value="$574.34" />
+```
+
+---
+
+## NFT Card
+
+```jsx
+function NFT() {
+  const textColor = useColorModeValue("#1B2559", "white")
+  const textColorBid = useColorModeValue("brand.500", "white")
+
+  return (
+    <Flex p="20px">
+      <Flex direction={{ base: "column" }} justify="center">
+        <Box mb={{ base: "20px", "2xl": "20px" }} position="relative">
+          <Image
+            src="https://i.ibb.co/x7kRP45/Nft3.png"
+            w={{ base: "100%", "3xl": "100%" }}
+            h={{ base: "100%", "3xl": "100%" }}
+            borderRadius="20px"
+          />
+          <Button
+            position="absolute"
+            bg="white"
+            _hover={{ bg: "whiteAlpha.900" }}
+            _active={{ bg: "white" }}
+            _focus={{ bg: "white" }}
+            p="0px !important"
+            top="14px"
+            right="14px"
+            borderRadius="50%"
+            minW="36px"
+            h="36px"
+          >
+            <StarIcon w="16px" h="16px" color="brand.500" />
+          </Button>
+        </Box>
+        <Flex flexDirection="column" justify="space-between" h="100%">
+          <Flex
+            justify="space-between"
+            direction={{
+              base: "row",
+              md: "column",
+              lg: "row",
+              xl: "column",
+              "2xl": "row",
+            }}
+            mb="auto"
+          >
+            <Flex direction="column">
+              <Text
+                color={textColor}
+                fontSize={{
+                  base: "xl",
+                  md: "lg",
+                  lg: "lg",
+                  xl: "lg",
+                  "2xl": "md",
+                  "3xl": "lg",
+                }}
+                mb="5px"
+                fontWeight="bold"
+                me="14px"
+              >
+                Colorful Heaven
+              </Text>
+              <Text
+                color="secondaryGray.600"
+                fontSize={{
+                  base: "sm",
+                }}
+                fontWeight="400"
+                me="14px"
+              >
+                By Mark Benjamin
+              </Text>
+            </Flex>
+            <AvatarGroup
+              max={3}
+              color={textColorBid}
+              size="sm"
+              mt={{
+                base: "0px",
+                md: "10px",
+                lg: "0px",
+                xl: "10px",
+                "2xl": "0px",
+              }}
+              fontSize="12px"
+            >
+              <Avatar src="https://i.ibb.co/34JtnzV/avatar1.png" />
+              <Avatar src="https://i.ibb.co/JtnHBfT/avatar2.png" />
+              <Avatar src="https://i.ibb.co/SszxzQV/avatar3.png" />
+              <Avatar src="https://i.ibb.co/2nCGngs/avatar4.png" />
+            </AvatarGroup>
+          </Flex>
+          <Flex
+            align="start"
+            justify="space-between"
+            direction={{
+              base: "row",
+              md: "column",
+              lg: "row",
+              xl: "column",
+              "2xl": "row",
+            }}
+            mt="25px"
+          >
+            <Text fontWeight="700" fontSize="sm" mt="10px" color={textColorBid}>
+              Current Bid: 0.91 ETH
+            </Text>
+            <Link
+              href="#"
+              mt={{
+                base: "0px",
+                md: "10px",
+                lg: "0px",
+                xl: "10px",
+                "2xl": "0px",
+              }}
+            >
+              <Button
+                bg={useColorModeValue("brand.900", "brand.400")}
+                color="white"
+                fontSize="sm"
+                fontWeight="500"
+                borderRadius="70px"
+                px="24px"
+                py="5px"
+              >
+                Place Bid
+              </Button>
+            </Link>
+          </Flex>
+        </Flex>
+      </Flex>
+    </Flex>
+  )
+}
+```
+
+```tsx
+import NFT from "components/card/NFT"
+```
+
+```tsx
+<NFT
+  name="Colorful Heaven"
+  author="By Mark Benjamin"
+  bidders={[Avatar1, Avatar2, Avatar3, Avatar4]}
+  image={Nft5}
+  currentBid="0.91 ETH"
+  download="#"
+/>
 ```

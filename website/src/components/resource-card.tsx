@@ -36,7 +36,7 @@ function ResourceCard(props: ResourceCardProps) {
             <Badge
               as="a"
               rel="tag"
-              color={useColorModeValue("teal.600", "teal.400")}
+              color={useColorModeValue("brand.600", "brand.400")}
               textTransform="uppercase"
               fontSize="xs"
               fontWeight="bold"

@@ -1,5 +1,5 @@
 ---
-title: Form Control
+title: Chakra UI Form Control - Horizon UI
 package: "@chakra-ui/form-control"
 description:
   Form Control provides context such as isInvalid, isDisabled, and isRequired to
@@ -14,7 +14,7 @@ forms.
 
 ## Import
 
-```js
+```tsx
 import {
   FormControl,
   FormLabel,
@@ -28,7 +28,7 @@ import {
 ```jsx
 <FormControl id="email">
   <FormLabel>Email address</FormLabel>
-  <Input type="email" />
+  <Input type="email" borderRadius="16px" />
   <FormHelperText>We'll never share your email.</FormHelperText>
 </FormControl>
 ```
@@ -81,14 +81,14 @@ By passing the `isRequired` props, the `Input` field has `aria-required` set to
 ```jsx
 <FormControl id="first-name" isRequired>
   <FormLabel>First name</FormLabel>
-  <Input placeholder="First name" />
+  <Input placeholder="First name" borderRadius="16px" />
 </FormControl>
 ```
 
 ```tsx
 <FormControl id="first-name" isRequired>
   <FormLabel>First name</FormLabel>
-  <Input placeholder="First name" />
+  <Input placeholder="First name" borderRadius="16px" />
 </FormControl>
 ```
 
@@ -173,14 +173,19 @@ function FormikExample() {
             {({ field, form }) => (
               <FormControl isInvalid={form.errors.name && form.touched.name}>
                 <FormLabel htmlFor="name">First name</FormLabel>
-                <Input {...field} id="name" placeholder="name" />
+                <Input
+                  {...field}
+                  id="name"
+                  placeholder="name"
+                  borderRadius="16px"
+                />
                 <FormErrorMessage>{form.errors.name}</FormErrorMessage>
               </FormControl>
             )}
           </Field>
           <Button
             mt={4}
-            colorScheme="teal"
+            colorScheme="brand"
             isLoading={props.isSubmitting}
             type="submit"
           >
@@ -221,14 +226,19 @@ function FormikExample() {
             {({ field, form }) => (
               <FormControl isInvalid={form.errors.name && form.touched.name}>
                 <FormLabel htmlFor="name">First name</FormLabel>
-                <Input {...field} id="name" placeholder="name" />
+                <Input
+                  {...field}
+                  id="name"
+                  placeholder="name"
+                  borderRadius="16px"
+                />
                 <FormErrorMessage>{form.errors.name}</FormErrorMessage>
               </FormControl>
             )}
           </Field>
           <Button
             mt={4}
-            colorScheme="teal"
+            colorScheme="brand"
             isLoading={props.isSubmitting}
             type="submit"
           >

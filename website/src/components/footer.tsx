@@ -1,8 +1,13 @@
 import React from "react"
-import { Box, Icon, Text, Stack, Link, chakra } from "@chakra-ui/react"
-import { IoLogoTwitter, IoLogoFacebook } from "react-icons/io"
-import { FaYoutube } from "react-icons/fa"
-import { DiGithubBadge } from "react-icons/di"
+import {
+  Flex,
+  Icon,
+  Text,
+  Link,
+  List,
+  ListItem,
+  useColorModeValue,
+} from "@chakra-ui/react"
 
 type FooterLinkProps = {
   icon?: React.ElementType
@@ -16,79 +21,71 @@ const FooterLink: React.FC<FooterLinkProps> = ({ icon, href, label }) => (
   </Link>
 )
 
-const links = [
-  {
-    icon: DiGithubBadge,
-    label: "GitHub",
-    href: "https://github.com/creativetimofficial",
-  },
-  {
-    icon: IoLogoTwitter,
-    label: "Twitter",
-    href: "https://twitter.com/creativetim",
-  },
-  {
-    icon: IoLogoFacebook,
-    label: "Facebook",
-    href: "https://www.facebook.com/CreativeTim",
-  },
-  {
-    icon: FaYoutube,
-    label: "YouTube",
-    href: "https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w",
-  },
-]
-
-const RomaniaFlag = (props) => (
-  <chakra.svg
-    display="inline-block"
-    mx="3"
-    h="16px"
-    w="auto"
-    viewBox="0 0 48 48"
-    verticalAlign="middle"
-    {...props}
-  >
-    <title>Romania</title>
-    <g>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
-        <path
-          fill="#002B7F"
-          d="M4 5C1.791 5 0 6.791 0 9v18c0 2.209 1.791 4 4 4h8V5H4z"
-        />
-        <path fill="#FCD116" d="M12 5h12v26H12z" />
-        <path
-          fill="#CE1126"
-          d="M32 5h-8v26h8c2.209 0 4-1.791 4-4V9c0-2.209-1.791-4-4-4z"
-        />
-      </svg>
-    </g>
-  </chakra.svg>
-)
-
 export const Footer = () => (
-  <Box as="footer" mt={12} textAlign="center">
-    <Text fontSize="sm">
-      <span>
-        Proudly made in
-        <RomaniaFlag />
-        by &nbsp;
-      </span>
-      <a target="_blank" href="https://www.creative-tim.com?ref=docs-pud">
-        Creative Tim{" "}
-      </a>
-      &amp;
-      <a target="_blank" href="https://www.simmmple.com?ref=docs-pud">
+  <Flex
+    justifyContent="space-between"
+    alignItems="center"
+    width="1440px"
+    maxW="100%"
+    mx="auto"
+    boxSizing="border-box"
+    flexDirection={{
+      base: "column",
+      xl: "row",
+    }}
+    px="0px"
+    pb="20px"
+    mt="60px"
+  >
+    <Text
+      color="gray.400"
+      textAlign={{
+        base: "center",
+        xl: "start",
+      }}
+      me="0px"
+      mb={{
+        base: "20px",
+        xl: "0px",
+      }}
+    >
+      &copy; 2022{" "}
+      <Text as="span">Horizon UI. All Rights Reserved. Made with love by</Text>
+      <Link
+        // color={linkTeal}
+        color={useColorModeValue("gray.600", "white")}
+        fontWeight="500"
+        href="https://www.simmmple.com?ref=horizon-docs"
+        target="_blank"
+      >
         {" "}
-        Simmmple
-      </a>
+        Simmmple!
+      </Link>
     </Text>
-    <Stack mt={4} direction="row" spacing="12px" justify="center">
-      {links.map((link) => (
-        <FooterLink key={link.href} {...link} />
-      ))}
-    </Stack>
-  </Box>
+    <List display="flex">
+      <ListItem
+        me={{
+          base: "20px",
+          md: "24px",
+        }}
+      >
+        <Link
+          color={useColorModeValue("gray.400", "white")}
+          href="https://blog.simmmple.com/?ref=horizon-docs"
+        >
+          Blog
+        </Link>
+      </ListItem>
+      <ListItem>
+        <Link
+          color={useColorModeValue("gray.400", "white")}
+          href="https://www.simmmple.com/licenses?ref=horizon-docs"
+        >
+          License
+        </Link>
+      </ListItem>
+    </List>
+  </Flex>
 )
 
 export default Footer

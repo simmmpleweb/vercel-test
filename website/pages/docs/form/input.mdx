@@ -1,5 +1,5 @@
 ---
-title: Input
+title: Chakra UI Input - Horizon UI
 package: "@chakra-ui/input"
 image: "components/input.svg"
 description:
@@ -11,7 +11,7 @@ field.
 
 ## Import
 
-```js
+```tsx
 import { Input } from "@chakra-ui/react"
 ```
 
@@ -20,11 +20,11 @@ import { Input } from "@chakra-ui/react"
 Here's a basic usage example of the `Input` component:
 
 ```jsx
-<Input placeholder="Basic usage" />
+<Input placeholder="Basic usage" borderRadius="16px" />
 ```
 
 ```tsx
-<Input placeholder="Basic usage" />
+<Input placeholder="Basic usage" borderRadius="16px" />
 ```
 
 ### Changing the size of the Input
@@ -38,19 +38,19 @@ The `Input` component comes in four sizes. The default is `md`.
 
 ```jsx
 <Stack spacing={3}>
-  <Input placeholder="extra small size" size="xs" />
-  <Input placeholder="small size" size="sm" />
-  <Input placeholder="medium size" size="md" />
-  <Input placeholder="large size" size="lg" />
+  <Input placeholder="extra small size" size="xs" borderRadius="10px" />
+  <Input placeholder="small size" size="sm" borderRadius="12px" />
+  <Input placeholder="medium size" size="md" borderRadius="14px" />
+  <Input placeholder="large size" size="lg" borderRadius="16px" />
 </Stack>
 ```
 
 ```tsx
 <Stack spacing={3}>
-  <Input placeholder="extra small size" size="xs" />
-  <Input placeholder="small size" size="sm" />
-  <Input placeholder="medium size" size="md" />
-  <Input placeholder="large size" size="lg" />
+  <Input placeholder="extra small size" size="xs" borderRadius="10px" />
+  <Input placeholder="small size" size="sm" borderRadius="12px" />
+  <Input placeholder="medium size" size="md" borderRadius="14px" />
+  <Input placeholder="large size" size="lg" borderRadius="16px" />
 </Stack>
 ```
 
@@ -61,8 +61,8 @@ The input component comes in 4 variants: `outline`, `unstyled`, `flushed`, and
 
 ```jsx
 <Stack spacing={3}>
-  <Input variant="outline" placeholder="Outline" />
-  <Input variant="filled" placeholder="Filled" />
+  <Input variant="outline" placeholder="Outline" borderRadius="16px" />
+  <Input variant="filled" placeholder="Filled" borderRadius="16px" />
   <Input variant="flushed" placeholder="Flushed" />
   <Input variant="unstyled" placeholder="Unstyled" />
 </Stack>
@@ -70,8 +70,8 @@ The input component comes in 4 variants: `outline`, `unstyled`, `flushed`, and
 
 ```tsx
 <Stack spacing={3}>
-  <Input variant="outline" placeholder="Outline" />
-  <Input variant="filled" placeholder="Filled" />
+  <Input variant="outline" placeholder="Outline" borderRadius="16px" />
+  <Input variant="filled" placeholder="Filled" borderRadius="16px" />
   <Input variant="flushed" placeholder="Flushed" />
   <Input variant="unstyled" placeholder="Unstyled" />
 </Stack>
@@ -86,15 +86,15 @@ component. Chakra UI exports `InputGroup`, `InputLeftAddon`, and
 ```jsx
 <Stack spacing={4}>
   <InputGroup>
-    <InputLeftAddon children="+234" />
-    <Input type="tel" placeholder="phone number" />
+    <InputLeftAddon children="+234" borderRadius="16px" />
+    <Input type="tel" placeholder="phone number" borderRadius="16px" />
   </InputGroup>
 
   {/* If you add the size prop to `InputGroup`, it'll pass it to all its children. */}
   <InputGroup size="sm">
-    <InputLeftAddon children="https://" />
-    <Input placeholder="mysite" />
-    <InputRightAddon children=".com" />
+    <InputLeftAddon children="https://" borderRadius="10px" />
+    <Input placeholder="mysite" borderRadius="10px" />
+    <InputRightAddon children=".com" borderRadius="10px" />
   </InputGroup>
 </Stack>
 ```
@@ -102,15 +102,15 @@ component. Chakra UI exports `InputGroup`, `InputLeftAddon`, and
 ```tsx
 <Stack spacing={4}>
   <InputGroup>
-    <InputLeftAddon children="+234" />
-    <Input type="tel" placeholder="phone number" />
+    <InputLeftAddon children="+234" borderRadius="16px" />
+    <Input type="tel" placeholder="phone number" borderRadius="16px" />
   </InputGroup>
 
   {/* If you add the size prop to `InputGroup`, it'll pass it to all its children. */}
   <InputGroup size="sm">
-    <InputLeftAddon children="https://" />
-    <Input placeholder="mysite" />
-    <InputRightAddon children=".com" />
+    <InputLeftAddon children="https://" borderRadius="10px" />
+    <Input placeholder="mysite" borderRadius="10px" />
+    <InputRightAddon children=".com" borderRadius="10px" />
   </InputGroup>
 </Stack>
 ```
@@ -130,9 +130,9 @@ focused the input.
   <InputGroup>
     <InputLeftElement
       pointerEvents="none"
-      children={<PhoneIcon color="gray.300" />}
+      children={<PhoneIcon color="gray.300" borderRadius="16px" />}
     />
-    <Input type="tel" placeholder="Phone number" />
+    <Input type="tel" placeholder="Phone number" borderRadius="16px" />
   </InputGroup>
 
   <InputGroup>
@@ -141,9 +141,13 @@ focused the input.
       color="gray.300"
       fontSize="1.2em"
       children="$"
+      borderRadius="16px"
     />
-    <Input placeholder="Enter amount" />
-    <InputRightElement children={<CheckIcon color="green.500" />} />
+    <Input placeholder="Enter amount" borderRadius="16px" />
+    <InputRightElement
+      borderRadius="16px"
+      children={<CheckIcon color="green.500" />}
+    />
   </InputGroup>
 </Stack>
 ```
@@ -153,9 +157,9 @@ focused the input.
   <InputGroup>
     <InputLeftElement
       pointerEvents="none"
-      children={<PhoneIcon color="gray.300" />}
+      children={<PhoneIcon color="gray.300" borderRadius="16px" />}
     />
-    <Input type="tel" placeholder="Phone number" />
+    <Input type="tel" placeholder="Phone number" borderRadius="16px" />
   </InputGroup>
 
   <InputGroup>
@@ -164,9 +168,13 @@ focused the input.
       color="gray.300"
       fontSize="1.2em"
       children="$"
+      borderRadius="16px"
     />
-    <Input placeholder="Enter amount" />
-    <InputRightElement children={<CheckIcon color="green.500" />} />
+    <Input placeholder="Enter amount" borderRadius="16px" />
+    <InputRightElement
+      borderRadius="16px"
+      children={<CheckIcon color="green.500" />}
+    />
   </InputGroup>
 </Stack>
 ```
@@ -187,9 +195,10 @@ function PasswordInput() {
         pr="4.5rem"
         type={show ? "text" : "password"}
         placeholder="Enter password"
+        borderRadius="16px"
       />
-      <InputRightElement width="4.5rem">
-        <Button h="1.75rem" size="sm" onClick={handleClick}>
+      <InputRightElement width="4.5rem" borderRadius="16px">
+        <Button h="1.75rem" size="sm" onClick={handleClick} borderRadius="10px">
           {show ? "Hide" : "Show"}
         </Button>
       </InputRightElement>
@@ -209,9 +218,10 @@ function PasswordInput() {
         pr="4.5rem"
         type={show ? "text" : "password"}
         placeholder="Enter password"
+        borderRadius="16px"
       />
-      <InputRightElement width="4.5rem">
-        <Button h="1.75rem" size="sm" onClick={handleClick}>
+      <InputRightElement width="4.5rem" borderRadius="16px">
+        <Button h="1.75rem" size="sm" onClick={handleClick} borderRadius="10px">
           {show ? "Hide" : "Show"}
         </Button>
       </InputRightElement>
@@ -235,6 +245,7 @@ function Example() {
         onChange={handleChange}
         placeholder="Here is a sample placeholder"
         size="sm"
+        borderRadius="10px"
       />
     </>
   )
@@ -254,6 +265,7 @@ function Example() {
         onChange={handleChange}
         placeholder="Here is a sample placeholder"
         size="sm"
+        borderRadius="10px"
       />
     </>
   )
@@ -264,52 +276,66 @@ function Example() {
 
 You can change the border color that shows when the input receives focus
 (`focusBorderColor`) and when `isInvalid` is set to `true` (`errorBorderColor`).
-The value can be set to a color in the theme object, like `teal.400`, or a raw
+The value can be set to a color in the theme object, like `brand.400`, or a raw
 CSS value.
 
 ```jsx
 <Stack spacing={3}>
-  <Input focusBorderColor="lime" placeholder="Here is a sample placeholder" />
+  <Input
+    focusBorderColor="lime"
+    placeholder="Here is a sample placeholder"
+    borderRadius="16px"
+  />
   <Input
     focusBorderColor="pink.400"
     placeholder="Here is a sample placeholder"
+    borderRadius="16px"
   />
   <Input
     isInvalid
     errorBorderColor="red.300"
     placeholder="Here is a sample placeholder"
+    borderRadius="16px"
   />
   <Input
     isInvalid
     errorBorderColor="crimson"
     placeholder="Here is a sample placeholder"
+    borderRadius="16px"
   />
 </Stack>
 ```
 
 ```tsx
 <Stack spacing={3}>
-  <Input focusBorderColor="lime" placeholder="Here is a sample placeholder" />
+  <Input
+    focusBorderColor="lime"
+    placeholder="Here is a sample placeholder"
+    borderRadius="16px"
+  />
   <Input
     focusBorderColor="pink.400"
     placeholder="Here is a sample placeholder"
+    borderRadius="16px"
   />
   <Input
     isInvalid
     errorBorderColor="red.300"
     placeholder="Here is a sample placeholder"
+    borderRadius="16px"
   />
   <Input
     isInvalid
     errorBorderColor="crimson"
     placeholder="Here is a sample placeholder"
+    borderRadius="16px"
   />
 </Stack>
 ```
 
 ## Props
 
-The `Input` component composes [Box](/docs/layout/box) so you can pass all `Box`
-props, and `React.InputHTMLAttributes`.
+The `Input` component composes [Box](/docs-horizon-ui-chakra/docs/layout/box) so
+you can pass all `Box` props, and `React.InputHTMLAttributes`.
 
 <PropsTable of="Input" />

@@ -1,5 +1,5 @@
 ---
-title: Menu
+title: Chakra UI Menu - Horizon UI
 package: "@chakra-ui/menu"
 image: "components/menu.svg"
 description:
@@ -24,7 +24,7 @@ Chakra UI exports 8 components for rendering menus:
 - `MenuOptionGroup`: A wrapper for checkable menu items (radio and checkbox).
 - `MenuItemOption`: The checkable menu item, to be used with `MenuOptionGroup`.
 
-```js
+```tsx
 import {
   Menu,
   MenuButton,
@@ -413,7 +413,7 @@ options. Use the `MenuOptionGroup` and `MenuItemOption` components.
 
 ```jsx
 <Menu closeOnSelect={false}>
-  <MenuButton as={Button} colorScheme="blue">
+  <MenuButton as={Button} colorScheme="brand">
     MenuItem
   </MenuButton>
   <MenuList minWidth="240px">
@@ -433,7 +433,7 @@ options. Use the `MenuOptionGroup` and `MenuItemOption` components.
 
 ```tsx
 <Menu closeOnSelect={false}>
-  <MenuButton as={Button} colorScheme="blue">
+  <MenuButton as={Button} colorScheme="brand">
     MenuItem
   </MenuButton>
   <MenuList minWidth="240px">
@@ -493,13 +493,13 @@ options. Use the `MenuOptionGroup` and `MenuItemOption` components.
 
 ### MenuButton Props
 
-`MenuButton` composes [Box](/docs/layout/box) so you can pass all `Box` props to
-change its style.
+`MenuButton` composes [Box](/docs-horizon-ui-chakra/docs/layout/box) so you can
+pass all `Box` props to change its style.
 
 ### MenuList Props
 
-`MenuList` composes [Box](/docs/layout/box) so you can pass all `Box` props to
-change its style.
+`MenuList` composes [Box](/docs-horizon-ui-chakra/docs/layout/box) so you can
+pass all `Box` props to change its style.
 
 ### MenuItem Props
 
@@ -507,8 +507,8 @@ change its style.
 
 ### MenuGroup Props
 
-`MenuGroup` composes [Box](/docs/layout/box) so you can pass all `Box` props to
-change its style.
+`MenuGroup` composes [Box](/docs-horizon-ui-chakra/docs/layout/box) so you can
+pass all `Box` props to change its style.
 
 ### MenuOptionGroup Props
 
@@ -516,7 +516,7 @@ change its style.
 
 ### MenuItemOption Props
 
-`MenuItemOption` composes [Box](/docs/layout/box) so you can pass all box props
-in addition to these:
+`MenuItemOption` composes [Box](/docs-horizon-ui-chakra/docs/layout/box) so you
+can pass all box props in addition to these:
 
 <PropsTable of="MenuItemOption" />

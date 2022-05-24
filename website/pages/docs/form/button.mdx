@@ -1,5 +1,5 @@
 ---
-title: Button
+title: Chakra UI Button - Horizon UI
 package: "@chakra-ui/button"
 image: "components/button.svg"
 description:
@@ -12,7 +12,7 @@ form, opening a dialog, canceling an action, or performing a delete operation.
 
 ## Import
 
-```js
+```tsx
 import { Button, ButtonGroup } from "@chakra-ui/react"
 ```
 
@@ -23,13 +23,13 @@ import { Button, ButtonGroup } from "@chakra-ui/react"
 ## Usage
 
 ```jsx
-<Button borderRadius="12px" colorScheme="blue">
+<Button borderRadius="12px" colorScheme="brand">
   Button
 </Button>
 ```
 
 ```tsx
-<Button colorScheme="blue">Button</Button>
+<Button variant="brand">Button</Button>
 ```
 
 ### Button Sizes
@@ -39,16 +39,16 @@ Use the `size` prop to change the size of the button. You can set the value to
 
 ```jsx
 <Stack spacing={4} direction="row" align="center">
-  <Button borderRadius="12px" colorScheme="teal" size="xs">
+  <Button borderRadius="12px" colorScheme="brand" size="xs">
     Button
   </Button>
-  <Button borderRadius="12px" colorScheme="teal" size="sm">
+  <Button borderRadius="12px" colorScheme="brand" size="sm">
     Button
   </Button>
-  <Button borderRadius="12px" colorScheme="teal" size="md">
+  <Button borderRadius="12px" colorScheme="brand" size="md">
     Button
   </Button>
-  <Button borderRadius="12px" colorScheme="teal" size="lg">
+  <Button borderRadius="12px" colorScheme="brand" size="lg">
     Button
   </Button>
 </Stack>
@@ -56,16 +56,16 @@ Use the `size` prop to change the size of the button. You can set the value to
 
 ```tsx
 <Stack spacing={4} direction="row" align="center">
-  <Button colorScheme="teal" size="xs">
+  <Button variant="brand" size="xs">
     Button
   </Button>
-  <Button colorScheme="teal" size="sm">
+  <Button variant="brand" size="sm">
     Button
   </Button>
-  <Button colorScheme="teal" size="md">
+  <Button variant="brand" size="md">
     Button
   </Button>
-  <Button colorScheme="teal" size="lg">
+  <Button variant="brand" size="lg">
     Button
   </Button>
 </Stack>
@@ -78,16 +78,16 @@ value to `solid`, `ghost`, `outline`, or `link`.
 
 ```jsx
 <Stack direction="row" spacing={4} align="center">
-  <Button borderRadius="12px" colorScheme="teal" variant="solid">
+  <Button borderRadius="12px" colorScheme="brand" variant="solid">
     Button
   </Button>
-  <Button borderRadius="12px" colorScheme="teal" variant="outline">
+  <Button borderRadius="12px" colorScheme="brand" variant="outline">
     Button
   </Button>
-  <Button borderRadius="12px" colorScheme="teal" variant="ghost">
+  <Button borderRadius="12px" colorScheme="brand" variant="ghost">
     Button
   </Button>
-  <Button borderRadius="12px" colorScheme="teal" variant="link">
+  <Button borderRadius="12px" colorScheme="brand" variant="link">
     Button
   </Button>
 </Stack>
@@ -95,18 +95,10 @@ value to `solid`, `ghost`, `outline`, or `link`.
 
 ```tsx
 <Stack direction="row" spacing={4} align="center">
-  <Button colorScheme="teal" variant="solid">
-    Button
-  </Button>
-  <Button colorScheme="teal" variant="outline">
-    Button
-  </Button>
-  <Button colorScheme="teal" variant="ghost">
-    Button
-  </Button>
-  <Button colorScheme="teal" variant="link">
-    Button
-  </Button>
+  <Button variant="brand">Button</Button>
+  <Button variant="outline">Button</Button>
+  <Button variant="ghost">Button</Button>
+  <Button variant="link">Button</Button>
 </Stack>
 ```
 
@@ -123,7 +115,7 @@ and `rightIcon` props respectively.
   <Button
     borderRadius="12px"
     leftIcon={<EmailIcon />}
-    colorScheme="teal"
+    colorScheme="brand"
     variant="solid"
   >
     Email
@@ -131,7 +123,7 @@ and `rightIcon` props respectively.
   <Button
     borderRadius="12px"
     rightIcon={<ArrowForwardIcon />}
-    colorScheme="teal"
+    colorScheme="brand"
     variant="outline"
   >
     Call us
@@ -141,10 +133,10 @@ and `rightIcon` props respectively.
 
 ```tsx
 <Stack direction="row" spacing={4}>
-  <Button leftIcon={<EmailIcon />} colorScheme="teal" variant="solid">
+  <Button leftIcon={<EmailIcon />} variant="brand">
     Email
   </Button>
-  <Button rightIcon={<ArrowForwardIcon />} colorScheme="teal" variant="outline">
+  <Button rightIcon={<ArrowForwardIcon />} variant="outline">
     Call us
   </Button>
 </Stack>
@@ -161,15 +153,15 @@ button.
   <Button
     borderRadius="12px"
     leftIcon={<MdBuild />}
-    colorScheme="pink"
-    variant="solid"
+    colorScheme="brand"
+    variant="brand"
   >
     Settings
   </Button>
   <Button
     borderRadius="12px"
     rightIcon={<MdCall />}
-    colorScheme="blue"
+    colorScheme="brand"
     variant="outline"
   >
     Call us
@@ -181,10 +173,10 @@ button.
 // import { MdBuild , MdCall } from "react-icons/md"
 
 <Stack direction="row" spacing={4}>
-  <Button leftIcon={<MdBuild />} colorScheme="pink" variant="solid">
+  <Button leftIcon={<MdBuild />} variant="brand">
     Settings
   </Button>
-  <Button rightIcon={<MdCall />} colorScheme="blue" variant="outline">
+  <Button rightIcon={<MdCall />} variant="outline">
     Call us
   </Button>
 </Stack>
@@ -199,14 +191,14 @@ You can also pass the `loadingText` prop to show a spinner and the loading text.
 
 ```jsx
 <Stack direction="row" spacing={4}>
-  <Button borderRadius="12px" isLoading colorScheme="teal" variant="solid">
+  <Button borderRadius="12px" isLoading colorScheme="brand" variant="solid">
     Email
   </Button>
   <Button
     borderRadius="12px"
     isLoading
     loadingText="Submitting"
-    colorScheme="teal"
+    colorScheme="brand"
     variant="outline"
   >
     Submit
@@ -216,15 +208,10 @@ You can also pass the `loadingText` prop to show a spinner and the loading text.
 
 ```tsx
 <Stack direction="row" spacing={4}>
-  <Button isLoading colorScheme="teal" variant="solid">
+  <Button isLoading variant="brand">
     Email
   </Button>
-  <Button
-    isLoading
-    loadingText="Submitting"
-    colorScheme="teal"
-    variant="outline"
-  >
+  <Button isLoading loadingText="Submitting" variant="outline">
     Submit
   </Button>
 </Stack>
@@ -237,7 +224,7 @@ requirements. Pass the `spinner` prop and set it to a custom react element.
 <Button
   borderRadius="12px"
   isLoading
-  colorScheme="blue"
+  colorScheme="brand"
   spinner={<BeatLoader size={8} color="white" />}
 >
   Click me
@@ -245,11 +232,7 @@ requirements. Pass the `spinner` prop and set it to a custom react element.
 ```
 
 ```tsx
-<Button
-  isLoading
-  colorScheme="blue"
-  spinner={<BeatLoader size={8} color="white" />}
->
+<Button isLoading spinner={<BeatLoader size={8} color="white" />}>
   Click me
 </Button>
 ```
@@ -273,7 +256,7 @@ element to either `start` or `end`. It is `start` by default.
     borderRadius="12px"
     isLoading
     loadingText="Loading"
-    colorScheme="teal"
+    colorScheme="brand"
     variant="outline"
     spinnerPlacement="end"
   >
@@ -296,7 +279,6 @@ element to either `start` or `end`. It is `start` by default.
   <Button
     isLoading
     loadingText="Loading"
-    colorScheme="teal"
     variant="outline"
     spinnerPlacement="end"
   >
@@ -348,7 +330,7 @@ use the `ButtonGroup` component, it allows you to:
 
 ```jsx
 <ButtonGroup borderRadius="15px" variant="outline" spacing="6">
-  <Button borderRadius="15px" colorScheme="blue">
+  <Button borderRadius="15px" colorScheme="brand">
     Save
   </Button>
   <Button borderRadius="15px">Cancel</Button>
@@ -357,7 +339,7 @@ use the `ButtonGroup` component, it allows you to:
 
 ```tsx
 <ButtonGroup variant="outline" spacing="6">
-  <Button colorScheme="blue">Save</Button>
+  <Button>Save</Button>
   <Button>Cancel</Button>
 </ButtonGroup>
 ```
@@ -396,7 +378,7 @@ use the `ButtonGroup` component, it allows you to:
 
 ```jsx
 <ButtonGroup borderRadius="15px" variant="outline" spacing="6">
-  <Button borderRadius="15px" colorScheme="blue">
+  <Button borderRadius="15px" colorScheme="brand">
     Save
   </Button>
   <Button borderRadius="15px">Cancel</Button>
@@ -405,7 +387,7 @@ use the `ButtonGroup` component, it allows you to:
 
 ```tsx
 <ButtonGroup variant="outline" spacing="6">
-  <Button colorScheme="blue">Save</Button>
+  <Button>Save</Button>
   <Button>Cancel</Button>
 </ButtonGroup>
 ```
@@ -426,7 +408,7 @@ props. This means you can override any style of the Button via props.
 
 ```jsx
 function Example() {
-  let mainTeal = useColorModeValue("teal.300", "teal.300")
+  let mainTeal = useColorModeValue("brand.300", "brand.300")
   let inputBg = useColorModeValue("white", "gray.800")
   let mainText = useColorModeValue("gray.700", "gray.200")
   let navbarIcon = useColorModeValue("gray.500", "gray.200")
@@ -446,7 +428,7 @@ function Example() {
       _focus={{ boxShadow: "none" }}
       _hover={{ boxShadow: "none" }}
       borderRadius="15px"
-      colorScheme="blue"
+      colorScheme="brand"
       ms="0px"
       px="0px"
       me={{ sm: "2px", md: "16px" }}
@@ -461,9 +443,7 @@ function Example() {
 ```
 
 ```tsx
-<Button variant="transparent-with-icon" colorScheme="blue">
-  Email
-</Button>
+<Button variant="transparent-with-icon">Email</Button>
 ```
 
 "no-hover"
@@ -490,8 +470,8 @@ function Example() {
   )
   let navbarBackdrop = "blur(21px)"
   let bgButton = useColorModeValue(
-    "linear-gradient(81.62deg, #313860 2.25%, #151928 79.87%)",
-    "gray.700",
+    "linear-gradient(135deg, #868CFF 0%, #4318FF 100%)",
+    "linear-gradient(135deg, #868CFF 0%, #4318FF 100%)",
   )
   let navbarPosition = "fixed"
   let colorButton = "white"
@@ -500,8 +480,8 @@ function Example() {
       _hover={{ boxShadow: "none" }}
       bg={bgButton}
       color={colorButton}
-      fontSize="xs"
-      borderRadius="35px"
+      fontSize="sm"
+      borderRadius="14px"
       px="30px"
       _active="none"
       display={{
@@ -517,24 +497,28 @@ function Example() {
 
 ```tsx
 let bgButton = useColorModeValue(
-  "linear-gradient(81.62deg, #313860 2.25%, #151928 79.87%)",
-  "gray.700",
+  "linear-gradient(135deg, #868CFF 0%, #4318FF 100%)",
+  "linear-gradient(135deg, #868CFF 0%, #4318FF 100%)",
 )
+let navbarPosition = "fixed"
 let colorButton = "white"
-;<Button
-  bg={bgButton}
-  color={colorButton}
-  fontSize="xs"
-  variant="no-hover"
-  borderRadius="35px"
-  px="30px"
-  display={{
-    sm: "none",
-    lg: "flex",
-  }}
->
-  Free Download
-</Button>
+return (
+  <Button
+    _hover={{ boxShadow: "none" }}
+    bg={bgButton}
+    color={colorButton}
+    fontSize="sm"
+    borderRadius="14px"
+    px="30px"
+    _active="none"
+    display={{
+      sm: "none",
+      lg: "flex",
+    }}
+  >
+    Free Download
+  </Button>
+)
 ```
 
 ---

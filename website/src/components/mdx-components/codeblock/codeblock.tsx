@@ -1,23 +1,23 @@
-import { Box, useBoolean } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react" //, useBoolean
 import dynamic from "next/dynamic"
 import theme from "prism-react-renderer/themes/nightOwl"
-import React, { useEffect } from "react"
+import React from "react" //, { useEffect }
 import CodeContainer from "./code-container"
 import CopyButton from "./copy-button"
 import Highlight from "./highlight"
-import { liveEditorStyle, liveErrorStyle } from "./styles"
+// import { liveEditorStyle, liveErrorStyle } from "./styles"
 
 const ReactLiveBlock = dynamic(() => import("./react-live-block"))
 
 function CodeBlock(props) {
-  const [isMounted, { on }] = useBoolean()
-  useEffect(
-    /**
-     * Lazily-load <ReactLiveBlock /> to save bundle size.
-     */
-    on,
-    [],
-  )
+  // const [isMounted, { on }] = useBoolean()
+  // useEffect(
+  //   /**
+  //    * Lazily-load <ReactLiveBlock /> to save bundle size.
+  //    */
+  //   on,
+  //   [],
+  // )
   const {
     className,
     live = true,
@@ -41,11 +41,11 @@ function CodeBlock(props) {
     ...rest,
   }
 
-  if (isMounted && language === "jsx" && live === true) {
+  if (true && language === "jsx" && live === true) {
     return <ReactLiveBlock editable {...reactLiveBlockProps} />
   }
 
-  if (isMounted && render) {
+  if (true && render) {
     /**
      * @TODO Not sure if this is even used?
      */
